@@ -2,7 +2,11 @@
 #ifndef _PD_H_
 #define _PD_H_
 
-#define L 100
+#include <iostream>
+#include <time.h>
+#include <math.h>
+
+#define L 50
 #define K 0.1
 #define TimeStep 1000
 #define b 1.2
@@ -17,7 +21,8 @@ public:
 	double initialize_payoff();
 	int syn_players();
 	double syn_payoff();
-	double feimi(double a, double c, int position);
+	double feimi(int i, int j, int I, int J);
+	double players_sum(int a);
 public:
 	int CurrentPlayers[L][L];
 	int CurrentPlayersPlus[L + 2][L + 2];
